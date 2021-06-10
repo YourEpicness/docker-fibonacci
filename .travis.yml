@@ -1,4 +1,5 @@
 sudo: required
+language: generic
 services:
   - docker
 
@@ -9,15 +10,15 @@ script:
   - docker run -e CI=true jbdiop/react-test npm run test
 
 after_sucess:
-  - docker build -t jbdiop/multi-client ./client
   - docker build -t jbdiop/multi-nginx ./nginx
+  - docker build -t jbdiop/multi-client ./client
   - docker build -t jbdiop/multi-server ./server
   - docker build -t jbdiop/multi-worker ./worker
   # Log in to docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
   # Take the images and push to docker hub
-  - docker push jbdiop/multi-client
   - docker push jbdiop/multi-nginx
+  - docker push jbdiop/multi-client
   - docker push jbdiop/multi-server
   - docker push jbdiop/multi-worker
