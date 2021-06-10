@@ -1,10 +1,8 @@
-import logo from './logo.svg';
-import './App.css';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import "./App.css";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-import Fib from './pages/Fib';
-import OtherPage from './pages/OtherPage';
-
+import Fib from "./pages/Fib";
+import OtherPage from "./pages/OtherPage";
 
 function App() {
   return (
