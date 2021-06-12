@@ -19,3 +19,12 @@
 .App-link:visited {
   color: white;
 }
+
+.links {
+  text-decoration: none;
+  color: white;
+}
+
+.links:hover {
+  color: aqua;
+}

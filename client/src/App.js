@@ -9,8 +9,13 @@ function App() {
     <Router>
       <div className="App">
         <header className="App-header">
-          <Link to="/"> Home </Link>
-          <Link to="/otherpage">Other Page</Link>
+          <Link to="/" className="links">
+            Home
+          </Link>
+          <h1 className="App-title"> Fib Calculator</h1>
+          <Link to="/otherpage" className="links">
+            Other Page
+          </Link>
         </header>
         <div>
           <Route exact path="/" component={Fib} />
