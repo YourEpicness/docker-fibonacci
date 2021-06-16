@@ -12,7 +12,7 @@ function App() {
           <Link to="/" className="links">
             Home
           </Link>
-          <h1 className="App-title"> Fib Calculator</h1>
+          <h1 className="App-title"> Fib Calculator v.AWS</h1>
           <Link to="/otherpage" className="links">
             Other Page
           </Link>
